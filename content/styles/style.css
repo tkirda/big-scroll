@@ -1,0 +1,8 @@
+﻿body { font-family: sans-serif; font-size: 12px; }
+.body { width: 800px; margin: 20px auto; }
+
+#big-scroll { width: 400px; height: 800px; border: 1px solid #CCC; overflow: auto; position: relative; }
+#big-scroll-container { width: 100%; position: relative; }
+
+.item { height: 39px; border-bottom: 1px dotted #000; }
+.item-wrapper { padding: 10px; font-weight: bold; font-size: 12px; }

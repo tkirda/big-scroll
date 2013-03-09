@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Big Scroll Demo</title>
+    <link href="content/styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="body">
+        <h1>Big Scroll Demo</h1>
+        <div style="padding: 5px 0;">
+            <label>
+                <input type="checkbox" data-bind="checked: toggleState"/>
+                Check / Unchek
+            </label>
+        </div>
+        <div id="big-scroll" data-bind="event: { scroll: $root.onScroll }">
+            <div id="big-scroll-container" data-bind="template: { name: 'pages-template', foreach: pages }">
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/html" id="pages-template">
+        <div style="position: absolute; width: 100%;" data-bind="template: { name: 'items-template', foreach: items }, style: { top: top }"></div>
+    </script>
+
+    <script type="text/html" id="items-template">
+        <div class="item">
+            <div class="item-wrapper">
+                <input type="checkbox" data-bind="checked: checked"/>
+                <span data-bind="text: label"></span>
+            </div>
+        </div>
+    </script>
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/knockout-2.2.1.js"></script>
+    <script src="scripts/big-scroll.js"></script>
+</body>
+</html>
