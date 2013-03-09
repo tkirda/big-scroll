@@ -10,7 +10,7 @@ $(function () {
         container = $('#big-scroll-container'),
 
         // Number of items to generate:
-        totalItems = 12345,
+        totalItems = 200 * 1000,
 
         // Total items per page.
         // It's OK, to set to more items than fits on the screen.
